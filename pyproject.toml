@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "torch"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swizzle-kernels"
+version = "0.1.0"
+description = "Hardware-roofline fused CUDA, Triton, and TPU Pallas mega-kernels for Swizzle AI"
+readme = "README.md"
+authors = [{ name = "Paramveer singh", email = "paramveer@swizzle.ai" }]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.2.0",
+    "triton>=2.2.0",
+    "numpy>=1.24.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-benchmark>=4.0"
+]
